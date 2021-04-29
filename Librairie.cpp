@@ -6,7 +6,7 @@ using namespace std;
 
 class livre	{
 private:
-    //Création des attributs
+    //CrÃ©ation des attributs
 	char *auteur,*titre,*editeur;
 	float *prix;
 	int *stock;
@@ -18,7 +18,7 @@ public:
 	prix= new float;
 	stock=new int;
 	}
-	//Création des méthodes
+	//CrÃ©ation des mÃ©thodes
 	void ajouter();
 	void modifier();
 	void afficher();
@@ -51,7 +51,7 @@ void livre::afficher()	{
 	cout<<"\nEntrez le nom de l'auteur : "<<auteur;
 	cout<<"\nEntrez le nom du titre : "<<titre;
 	cout<<"\nEntrez le nom de l'editeur : "<<editeur;
-	cout<<"\nEntrez le prix : "<<*prix<<" €";
+	cout<<"\nEntrez le prix : "<<*prix<<" Euro";
 	cout<<"\nEntrer le rayon du stock : "<<*stock;
 
 }
@@ -70,7 +70,7 @@ void livre::acheter_un_livre()	{
 	if(compte<=*stock)	{
 		*stock=*stock-compte;
 		cout<<"\nLivres achetes avec succes";
-		cout<<"\nMontant: "<<(*prix)*compte<<" €";
+		cout<<"\nMontant: "<<(*prix)*compte<<" Euro";
 	}
 	else
 		cout<<"\nLivre non en stock";
@@ -129,7 +129,7 @@ int main()	{
 
 				for(t=0;t<i;t++)	{
 					if(B[t]->search(titreAchat,auteurAchat))	{
-						cout<<"\nLivre trouvé avec succes";
+						cout<<"\nLivre trouvÃ© avec succes";
 						B[t]->modifier();
 						break;
 					}
